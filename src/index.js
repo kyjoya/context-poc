@@ -1,12 +1,26 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+// pass down campaign name
+// each step container has a dictionary of question keys
+// componentDidMount fetches JSON for config
+// questions contain keys? render substeps
+// each substep
+// questionKeys map through
+
+// context passes campaignquestions and benefits as props
+// all container components are wrapped in higherorder component passing these props
+// containers take care of matching benefitkeys with questions (??)
+// matched questions are passed to sub route containers
+// rendered based on a dictionary of question keys on page

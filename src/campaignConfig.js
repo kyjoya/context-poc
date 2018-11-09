@@ -1,11 +1,24 @@
-import React from 'react';
-
 export const campaignConfig = {
   campaignQuestions: [
     {
+      uuid: 'e65a22e3-4ec2-4b1e-9bae-61d6d83d427a',
       label: 'Are you Pregnant?',
       key: 'areYouPregnant',
       fieldType: 'text',
+      ariaText: ''
+    },
+    {
+      uuid: 'e65a22e3-4ec2-4b1e-9bae-61d6d83d427a',
+      label: 'Are you using this?',
+      key: 'areYouUsingThis',
+      fieldType: 'select',
+      ariaText: ''
+    },
+    {
+      uuid: 'e65a22e3-4ec2-4bae-61d6d83d427a',
+      label: 'Are you Cool?',
+      key: 'areYouCool',
+      fieldType: 'radio',
       ariaText: ''
     }
   ]
@@ -177,6 +190,4 @@ export const benefitsConfig = {
   }
 }
 
-export const CampaignContext = React.createContext(
-  campaignConfig['campaignQuestions']
-);
+export default { campaignConfig, benefitsConfig }
